@@ -1,0 +1,15 @@
+{
+  "originHash" : "dd49ab862ff2aa7edfca51b2310c3a7d3550db9b17658daead0b0cf386163484",
+  "pins" : [
+    {
+      "identity" : "adaptivepanel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/takimoto3/AdaptivePanel",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6d3f4a6522c912b6e9c44feea7d0fd7b96b70e66"
+      }
+    }
+  ],
+  "version" : 3
+}
