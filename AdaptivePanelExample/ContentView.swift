@@ -26,6 +26,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Selection", systemImage: "link")
                 }
+            BackgroundContentExampleView()
+                .tabItem {
+                    Label("Background(Content)", systemImage: "square.and.arrow.up")
+                }
         }
     }
 }

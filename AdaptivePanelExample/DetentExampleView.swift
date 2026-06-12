@@ -180,36 +180,33 @@ struct DetentExampleView: View {
     @State private var present: Bool = false
     @State private var showPanel = false
     @State private var count = 50
+    @State private var backdropClear = false
 
     var body: some View {
         NavigationStack {
             List {
-                Section {
-                    LabeledContent {
-                        VStack(alignment: .leading, spacing: 12) {
-                            ForEach(DetentType.allCases) { type in
-                                Toggle(
-                                    isOn: Binding(
-                                        get: {
-                                            selectedDetents.contains(type)
-                                        },
-                                        set: { isSelected in
-                                            if isSelected {
-                                                selectedDetents.insert(type)
-                                            } else if selectedDetents.count > 1 {
-                                                selectedDetents.remove(type)
-                                            }
+                Section("Detents") {
+                    VStack(alignment: .leading, spacing: 12) {
+                        ForEach(DetentType.allCases) { type in
+                            Toggle(
+                                isOn: Binding(
+                                    get: {
+                                        selectedDetents.contains(type)
+                                    },
+                                    set: { isSelected in
+                                        if isSelected {
+                                            selectedDetents.insert(type)
+                                        } else if selectedDetents.count > 1 {
+                                            selectedDetents.remove(type)
                                         }
-                                    )
-                                ) {
-                                    Text(type.rawValue)
-                                        .lineLimit(1)
-                                        .truncationMode(.tail)
-                                }
+                                    }
+                                )
+                            ) {
+                                Text(type.rawValue)
+                                    .lineLimit(1)
+                                    .truncationMode(.tail)
                             }
                         }
-                    } label: {
-                        Text("Detents")
                     }
                 }
                 
@@ -243,6 +240,7 @@ struct DetentExampleView: View {
                         }
                     }
                     .pickerStyle(.menu)
+                    Toggle("BackdropColor(.clear)", isOn: $backdropClear)
                 }
                 
                 Section("Corner Radius") {
@@ -318,7 +316,7 @@ struct DetentExampleView: View {
                     .panelDragIndicator(dragIndicator)
                     .panelBackgroundInteraction(backgroundInteraction.toPanelInteraction)
                     .panelInteractiveDismissDisabled(interactiveDismissDisabled)
-                    .panelBackground(selectedBackground.style)
+                    .panelBackground(selectedBackground.style, backdropColor: backdropClear ? .clear : nil)
                     .panelCornerRadius(radius)
                     .panelLandscapeLayout(landmarkAlignment, width: landmarkWidth, ignoreSafeArea: landmarkIgnoreSafearea)
                     .id(selectedDetents)
@@ -328,7 +326,7 @@ struct DetentExampleView: View {
                     .panelBackgroundInteraction(backgroundInteraction.toPanelInteraction)
                     .panelDragIndicator(dragIndicator)
                     .panelInteractiveDismissDisabled(interactiveDismissDisabled)
-                    .panelBackground(selectedBackground.style)
+                    .panelBackground(selectedBackground.style, backdropColor: backdropClear ? .clear : nil)
                     .panelCornerRadius(radius)
                     .panelLandscapeLayout(landmarkAlignment, width: landmarkWidth, ignoreSafeArea: landmarkIgnoreSafearea)
                     .id(selectedDetents)
