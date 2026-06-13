@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/takimoto3/AdaptivePanel",
       "state" : {
-        "revision" : "8f0ff7c44599a0fa49e47d003950e4b3387446fd",
-        "version" : "1.1.0"
+        "revision" : "e71ea08b4a8912331734f0c5f08c045179a7609e",
+        "version" : "1.1.1"
       }
     }
   ],

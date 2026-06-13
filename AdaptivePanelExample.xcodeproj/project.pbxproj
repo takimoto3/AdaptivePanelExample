@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6984D8812FDC13E60034C83D /* AdaptivePanel in Frameworks */ = {isa = PBXBuildFile; productRef = 6984D8802FDC13E60034C83D /* AdaptivePanel */; };
+		69EACA9D2FDD6D9600A807E2 /* AdaptivePanel in Frameworks */ = {isa = PBXBuildFile; productRef = 69EACA9C2FDD6D9600A807E2 /* AdaptivePanel */; };
 		69F2ED562FD4593800EB47C2 /* AdaptivePanel in Frameworks */ = {isa = PBXBuildFile; productRef = 69F2ED552FD4593800EB47C2 /* AdaptivePanel */; };
+		69F60F0B2FDCFF1D00A8ED1D /* AdaptivePanel in Frameworks */ = {isa = PBXBuildFile; productRef = 69F60F0A2FDCFF1D00A8ED1D /* AdaptivePanel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				69F2ED562FD4593800EB47C2 /* AdaptivePanel in Frameworks */,
-				6984D8812FDC13E60034C83D /* AdaptivePanel in Frameworks */,
+				69F60F0B2FDCFF1D00A8ED1D /* AdaptivePanel in Frameworks */,
+				69EACA9D2FDD6D9600A807E2 /* AdaptivePanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +75,8 @@
 			name = AdaptivePanelExample;
 			packageProductDependencies = (
 				69F2ED552FD4593800EB47C2 /* AdaptivePanel */,
-				6984D8802FDC13E60034C83D /* AdaptivePanel */,
+				69F60F0A2FDCFF1D00A8ED1D /* AdaptivePanel */,
+				69EACA9C2FDD6D9600A807E2 /* AdaptivePanel */,
 			);
 			productName = AdaptivePanelExample;
 			productReference = 69BCE79E2F68159900939BC1 /* AdaptivePanelExample.app */;
@@ -104,7 +107,7 @@
 			mainGroup = 69BCE7952F68159900939BC1;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				6984D87F2FDC13E60034C83D /* XCRemoteSwiftPackageReference "AdaptivePanel" */,
+				69EACA9B2FDD6D9600A807E2 /* XCRemoteSwiftPackageReference "AdaptivePanel" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 69BCE79F2F68159900939BC1 /* Products */;
@@ -373,23 +376,27 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6984D87F2FDC13E60034C83D /* XCRemoteSwiftPackageReference "AdaptivePanel" */ = {
+		69EACA9B2FDD6D9600A807E2 /* XCRemoteSwiftPackageReference "AdaptivePanel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/takimoto3/AdaptivePanel";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.1.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6984D8802FDC13E60034C83D /* AdaptivePanel */ = {
+		69EACA9C2FDD6D9600A807E2 /* AdaptivePanel */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6984D87F2FDC13E60034C83D /* XCRemoteSwiftPackageReference "AdaptivePanel" */;
+			package = 69EACA9B2FDD6D9600A807E2 /* XCRemoteSwiftPackageReference "AdaptivePanel" */;
 			productName = AdaptivePanel;
 		};
 		69F2ED552FD4593800EB47C2 /* AdaptivePanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AdaptivePanel;
+		};
+		69F60F0A2FDCFF1D00A8ED1D /* AdaptivePanel */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AdaptivePanel;
 		};
